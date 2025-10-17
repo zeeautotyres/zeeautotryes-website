@@ -35,10 +35,40 @@ jobs:
         
       - name: Fix asset paths
         run: |
+          # Check what's in the output directory
+          ls -la out/
+          echo "--- Contents of out directory ---"
+          find out/ -type d -name "*" | head -20
+          echo "--- Looking for assets directory ---"
+          find out/ -name "assets" -type d
+          echo "--- Looking for _next directory ---"
+          find out/ -name "_next" -type d
+          
           # Copy assets to root for GitHub Pages compatibility
           cd out
-          cp -r zeeautotryes-website/assets ./
-          cp -r zeeautotryes-website/_next ./
+          if [ -d "zeeautotryes-website/assets" ]; then
+            cp -r zeeautotryes-website/assets ./
+            echo "Copied assets directory"
+          else
+            echo "zeeautotryes-website/assets not found, checking for assets in root"
+            if [ -d "assets" ]; then
+              echo "Assets already in root directory"
+            else
+              echo "No assets directory found"
+            fi
+          fi
+          
+          if [ -d "zeeautotryes-website/_next" ]; then
+            cp -r zeeautotryes-website/_next ./
+            echo "Copied _next directory"
+          else
+            echo "zeeautotryes-website/_next not found, checking for _next in root"
+            if [ -d "_next" ]; then
+              echo "_next already in root directory"
+            else
+              echo "No _next directory found"
+            fi
+          fi
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
