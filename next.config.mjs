@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: '/zeeautotryes-website',
-  assetPrefix: '/zeeautotryes-website/',
+  // Remove basePath and assetPrefix for now
+  // We'll handle the subdirectory deployment in GitHub Actions
 };
 
 export default nextConfig;

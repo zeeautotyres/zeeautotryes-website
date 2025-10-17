@@ -33,42 +33,41 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Fix asset paths
+      - name: Prepare for GitHub Pages subdirectory
         run: |
-          # Check what's in the output directory
-          ls -la out/
-          echo "--- Contents of out directory ---"
-          find out/ -type d -name "*" | head -20
-          echo "--- Looking for assets directory ---"
-          find out/ -name "assets" -type d
-          echo "--- Looking for _next directory ---"
-          find out/ -name "_next" -type d
+          # Create the subdirectory structure for GitHub Pages
+          mkdir -p out/zeeautotryes-website
           
-          # Copy assets to root for GitHub Pages compatibility
+          # Move all built files to the subdirectory
           cd out
-          if [ -d "zeeautotryes-website/assets" ]; then
-            cp -r zeeautotryes-website/assets ./
-            echo "Copied assets directory"
-          else
-            echo "zeeautotryes-website/assets not found, checking for assets in root"
-            if [ -d "assets" ]; then
-              echo "Assets already in root directory"
-            else
-              echo "No assets directory found"
-            fi
-          fi
+          mv *.html zeeautotryes-website/ 2>/dev/null || true
+          mv *.txt zeeautotryes-website/ 2>/dev/null || true
+          mv service zeeautotryes-website/ 2>/dev/null || true
+          mv home2 zeeautotryes-website/ 2>/dev/null || true
+          mv about zeeautotryes-website/ 2>/dev/null || true
+          mv contact zeeautotryes-website/ 2>/dev/null || true
+          mv project zeeautotryes-website/ 2>/dev/null || true
+          mv team zeeautotryes-website/ 2>/dev/null || true
+          mv blog zeeautotryes-website/ 2>/dev/null || true
+          mv _next zeeautotryes-website/ 2>/dev/null || true
+          mv assets zeeautotryes-website/ 2>/dev/null || true
           
-          if [ -d "zeeautotryes-website/_next" ]; then
-            cp -r zeeautotryes-website/_next ./
-            echo "Copied _next directory"
-          else
-            echo "zeeautotryes-website/_next not found, checking for _next in root"
-            if [ -d "_next" ]; then
-              echo "_next already in root directory"
-            else
-              echo "No _next directory found"
-            fi
-          fi
+          # Create a root index.html that redirects to the subdirectory
+          cat > index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=/zeeautotryes-website/">
+            <link rel="canonical" href="/zeeautotryes-website/">
+          </head>
+          <body>
+            <p>Redirecting to <a href="/zeeautotryes-website/">zeeautotryes-website</a>...</p>
+          </body>
+          </html>
+          EOF
+          
+          echo "Created subdirectory structure for GitHub Pages"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
