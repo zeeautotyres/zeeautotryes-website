@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getAssetPath } from "../../utils/pathUtils";
 
 const Footer1 = () => {
     return (
@@ -117,7 +116,7 @@ const Footer1 = () => {
                 Copyright © 2024 <a href="#">Zee Auto Tyres & Alignment</a>. All Rights Reserved.
               </div>
               <div>
-              <Image src={getAssetPath("/assets/img/payment_card.svg")} alt="img" width={191} height={20}   />
+              <Image src="/assets/img/payment_card.svg" alt="img" width={191} height={20}   />
               </div>
             </div>
           </div>

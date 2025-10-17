@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Link from "next/link";
 import Image from "next/image";
-import { getAssetPath } from "../../utils/pathUtils";
 
 const Footer2 = () => {
 
@@ -57,7 +56,7 @@ const Footer2 = () => {
               <div className="cs_footer_col">
                 <div className="cs_footer_widget">
                   <div className="cs_text_widget">
-                  <Image src={getAssetPath("/assets/img/footer_logo_2.svg")} alt="img" width={225} height={64}   />
+                  <Image src="/assets/img/footer_logo_2.svg" alt="img" width={225} height={64}   />
                     <p>Phosfluorescently transform out-of-the-box paradigms whereas accurate supply chains. Continually</p>
                   </div>
                   {/* <div className="cs_social_btns cs_style_1">
@@ -132,7 +131,7 @@ const Footer2 = () => {
                     <li>
                       <div className="cs_recent_post">
                         <Link href="/blog/blog-details" className="cs_recent_post_thumb">
-                        <Image src={getAssetPath("/assets/img/recent_post_1.jpg")} alt="img" width={80} height={80}   />
+                        <Image src="/assets/img/recent_post_1.jpg" alt="img" width={80} height={80}   />
                         </Link>
                         <div className="cs_recent_post_right">
                           <h3 className="cs_white_color cs_fs_16 cs_medium cs_mb_5">
@@ -146,7 +145,7 @@ const Footer2 = () => {
                     <li>
                       <div className="cs_recent_post">
                         <Link href="/blog/blog-details" className="cs_recent_post_thumb">
-                        <Image src={getAssetPath("/assets/img/recent_post_2.jpg")} alt="img" width={80} height={80}   />
+                        <Image src="/assets/img/recent_post_2.jpg" alt="img" width={80} height={80}   />
                         </Link>
                         <div className="cs_recent_post_right">
                           <h3 className="cs_white_color cs_fs_16 cs_medium cs_mb_5">
@@ -170,7 +169,7 @@ const Footer2 = () => {
                 Copyright © 2024 <a href="#">Cripar</a>. All Rights Reserved.
               </div>
               <div>
-              <Image src={getAssetPath("/assets/img/payment_card.svg")} alt="img" width={191} height={20}   />
+              <Image src="/assets/img/payment_card.svg" alt="img" width={191} height={20}   />
               </div>
             </div>
           </div>
