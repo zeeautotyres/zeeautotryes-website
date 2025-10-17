@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/cripar-nextjs' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/cripar-nextjs' : ''
+  basePath: process.env.NODE_ENV === 'production' ? '/cripar-nextjs' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/cripar-nextjs/' : '',
 };
 
 export default nextConfig;

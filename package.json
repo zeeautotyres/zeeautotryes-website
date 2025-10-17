@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build && next export",
-    "deploy": "npm run build && touch out/.nojekyll && git add out/ && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix out origin gh-pages"
+    "export": "next build && next export"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -24,9 +23,10 @@
   "overrides": {
     "react": "$react",
     "react-dom": "$react-dom"
-  },  
+  },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "eslint-config-next": "15.0.3",
+    "gh-pages": "^6.3.0"
   }
 }
