@@ -35,28 +35,10 @@ jobs:
         
       - name: Fix static asset paths
         run: |
-          # Fix image paths in ALL HTML files to include basePath
-          echo "Fixing static asset paths in all HTML files..."
-          
-          # Find and fix all HTML files recursively
-          find out/ -name "*.html" -type f | while read file; do
-            echo "Processing: $file"
-            sed -i 's|src="/assets/|src="/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|href="/assets/|href="/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|data-src="/assets/|data-src="/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|data-background="/assets/|data-background="/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|url("/assets/|url("/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|url(/assets/|url(/zeeautotryes-website/assets/|g' "$file"
-          done
-          
-          # Also fix any CSS files that might contain asset references
-          find out/ -name "*.css" -type f | while read file; do
-            echo "Processing CSS: $file"
-            sed -i 's|url("/assets/|url("/zeeautotryes-website/assets/|g' "$file"
-            sed -i 's|url(/assets/|url(/zeeautotryes-website/assets/|g' "$file"
-          done
-          
-          echo "Fixed static asset paths in all files"
+          # Use Node.js script to fix asset paths more reliably
+          echo "Fixing static asset paths using Node.js script..."
+          node scripts/fix-asset-paths.js
+          echo "Asset paths fixed successfully!"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
