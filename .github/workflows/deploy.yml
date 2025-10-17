@@ -33,6 +33,13 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Fix asset paths
+        run: |
+          # Create symlinks for assets to work with basePath
+          cd out
+          ln -sf zeeautotryes-website/assets assets
+          ln -sf zeeautotryes-website/_next _next
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
