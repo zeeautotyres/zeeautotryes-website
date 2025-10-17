@@ -52,20 +52,12 @@ jobs:
           mv _next zeeautotryes-website/ 2>/dev/null || true
           mv assets zeeautotryes-website/ 2>/dev/null || true
           
-          # Create a root index.html that redirects to the subdirectory
-          cat > index.html << 'EOF'
-          <!DOCTYPE html>
-          <html>
-          <head>
-            <meta charset="utf-8">
-            <meta http-equiv="refresh" content="0; url=/zeeautotryes-website/">
-            <link rel="canonical" href="/zeeautotryes-website/">
-          </head>
-          <body>
-            <p>Redirecting to <a href="/zeeautotryes-website/">zeeautotryes-website</a>...</p>
-          </body>
-          </html>
-          EOF
+          # Copy the main index.html to root for direct access
+          cp zeeautotryes-website/index.html index.html
+          
+          # Also copy assets to root for direct access
+          cp -r zeeautotryes-website/assets ./
+          cp -r zeeautotryes-website/_next ./
           
           echo "Created subdirectory structure for GitHub Pages"
         
