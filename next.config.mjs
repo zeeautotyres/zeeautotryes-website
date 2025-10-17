@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/cripar-nextjs' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/cripar-nextjs/' : '',
+  // Remove basePath and assetPrefix for GitHub Pages
+  // GitHub Pages will serve from root
 };
 
 export default nextConfig;
