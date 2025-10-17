@@ -33,33 +33,15 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Prepare for GitHub Pages subdirectory
+      - name: Prepare for GitHub Pages
         run: |
-          # Create the subdirectory structure for GitHub Pages
-          mkdir -p out/zeeautotryes-website
-          
-          # Move all built files to the subdirectory
-          cd out
-          mv *.html zeeautotryes-website/ 2>/dev/null || true
-          mv *.txt zeeautotryes-website/ 2>/dev/null || true
-          mv service zeeautotryes-website/ 2>/dev/null || true
-          mv home2 zeeautotryes-website/ 2>/dev/null || true
-          mv about zeeautotryes-website/ 2>/dev/null || true
-          mv contact zeeautotryes-website/ 2>/dev/null || true
-          mv project zeeautotryes-website/ 2>/dev/null || true
-          mv team zeeautotryes-website/ 2>/dev/null || true
-          mv blog zeeautotryes-website/ 2>/dev/null || true
-          mv _next zeeautotryes-website/ 2>/dev/null || true
-          mv assets zeeautotryes-website/ 2>/dev/null || true
-          
-          # Copy the main index.html to root for direct access
-          cp zeeautotryes-website/index.html index.html
-          
-          # Also copy assets to root for direct access
-          cp -r zeeautotryes-website/assets ./
-          cp -r zeeautotryes-website/_next ./
-          
-          echo "Created subdirectory structure for GitHub Pages"
+          # The build already creates the correct structure with basePath
+          echo "Build output structure:"
+          ls -la out/
+          echo "Assets directory:"
+          ls -la out/assets/ || echo "No assets directory found"
+          echo "_next directory:"
+          ls -la out/_next/ || echo "No _next directory found"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
