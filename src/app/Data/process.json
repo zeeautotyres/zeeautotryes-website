@@ -1,0 +1,23 @@
+[
+    {
+      "img": "/assets/img/icon1.png",   
+      "title": "Vehicle Assessment",
+      "desc": "We inspect your vehicle's tyres and alignment to identify any issues or wear patterns."
+    },
+    {
+      "img": "/assets/img/icon2.png",   
+      "title": "Service Recommendation",
+      "desc": "Our experts recommend the best tyre or alignment solution based on your vehicle's needs."
+    },
+    {
+      "img": "/assets/img/icon3.png",   
+      "title": "Professional Service",
+      "desc": "Our skilled technicians perform tyre fitting, alignment, or balancing with precision and care."
+    },
+    {
+      "img": "/assets/img/icon4.png",   
+      "title": "Quality Assurance",
+      "desc": "We test and verify all work to ensure your vehicle is safe and performing optimally."
+    }       
+  ]
+  
