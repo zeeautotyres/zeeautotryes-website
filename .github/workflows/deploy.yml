@@ -33,15 +33,15 @@ jobs:
       - name: Build
         run: npm run build
         
-      - name: Prepare for GitHub Pages
+      - name: Fix static asset paths
         run: |
-          # The build already creates the correct structure with basePath
-          echo "Build output structure:"
-          ls -la out/
-          echo "Assets directory:"
-          ls -la out/assets/ || echo "No assets directory found"
-          echo "_next directory:"
-          ls -la out/_next/ || echo "No _next directory found"
+          # Fix image paths in HTML files to include basePath
+          echo "Fixing static asset paths..."
+          find out/ -name "*.html" -exec sed -i 's|src="/assets/|src="/zeeautotryes-website/assets/|g' {} \;
+          find out/ -name "*.html" -exec sed -i 's|href="/assets/|href="/zeeautotryes-website/assets/|g' {} \;
+          find out/ -name "*.html" -exec sed -i 's|data-src="/assets/|data-src="/zeeautotryes-website/assets/|g' {} \;
+          find out/ -name "*.html" -exec sed -i 's|data-background="/assets/|data-background="/zeeautotryes-website/assets/|g' {} \;
+          echo "Fixed static asset paths in HTML files"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
