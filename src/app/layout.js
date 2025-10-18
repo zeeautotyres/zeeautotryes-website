@@ -18,13 +18,13 @@ const poppins = Poppins({
 export const metadata = {
   title: {
     absolute: '',
-    default: 'Cripar - Car Repair Services NextJS Template',
-    template: '%s | Cripar - Car Repair Services NextJS Template',
+    default: 'Zee Auto Tyres & Alignment - Professional Tyre Services in Wembley',
+    template: '%s | Zee Auto Tyres & Alignment',
   },
-  description: 'Cripar - Car Repair Services NextJS Template',
+  description: 'Professional tyre services in Wembley. New & used tyres, wheel alignment, balancing, puncture repair and brake services. Quality guaranteed at competitive prices.',
   openGraph: {
-    title: 'Cripar - Car Repair Services NextJS Template',
-    description: 'Cripar - Car Repair Services NextJS Template',
+    title: 'Zee Auto Tyres & Alignment - Professional Tyre Services in Wembley',
+    description: 'Professional tyre services in Wembley. New & used tyres, wheel alignment, balancing, puncture repair and brake services. Quality guaranteed at competitive prices.',
     image: '/openGraphImage.jpg',
   },
 };
