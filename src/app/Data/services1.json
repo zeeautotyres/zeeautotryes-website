@@ -9,7 +9,7 @@
   },
   {
     "img": "/assets/img/alignment.jpg",
-    "icon": "/assets/img/icons/service_icon_2.svg",
+    "icon": "/assets/img/icons/service_icon_1.svg",
     "title": "Wheel Alignment",
     "desc": "Professional wheel alignment service to ensure your vehicle drives straight and your tyres wear evenly for optimal performance.",   
     "btnText": "READ MORE",
@@ -18,7 +18,7 @@
   
   {
     "img": "/assets/img/tyre1.jpg",
-    "icon": "/assets/img/icons/service_icon_6.svg",
+    "icon": "/assets/img/icons/service_icon_1.svg",
     "title": "Puncture Repair",
     "desc": "Quick and reliable puncture repair service. We can fix most punctures safely and efficiently to get you back on the road.",   
     "btnText": "READ MORE",
@@ -26,14 +26,14 @@
   },
   {
     "img": "/assets/img/brakes.jpg",
-    "icon": "/assets/img/icons/service_icon_4.svg",
+    "icon": "/assets/img/icons/service_icon_1.svg",
     "title": "Service Brakes",
     "desc": "Complete brake service and inspection to ensure your safety. We check brake pads, discs, and fluid for optimal braking performance.",   
     "btnText": "READ MORE",
     "btnLink": "/service/service-details"
   },{
     "img": "/assets/img/tyre2.jpg",
-    "icon": "/assets/img/icons/service_icon_3.svg",
+    "icon": "/assets/img/icons/service_icon_1.svg",
     "title": "Balancing",
     "desc": "Expert wheel balancing service to eliminate vibrations and ensure smooth driving. Essential for tyre longevity and comfort.",   
     "btnText": "READ MORE",

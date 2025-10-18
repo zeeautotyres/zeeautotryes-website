@@ -19,7 +19,7 @@ const page = () => {
             <HeroBanner1></HeroBanner1>
             <About1
                 img1="/assets/img/about_img_1.webp"
-                img2="/assets/img/about_img_2.jpg"
+                img2="/assets/img/about2.jpg"
                 img3="/assets/img/about_img_3.webp"
                 expNumber="30"
                 expYers="Years"

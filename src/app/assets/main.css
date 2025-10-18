@@ -37,8 +37,8 @@
   --gray-color: #f5f7fa;
   --gray2-color: #e8ebee;
   --border-color: #ecf1f5;
-  --heading-font: "Archivo", sans-serif;
-  --body-font: "Roboto", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Inter", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -1948,6 +1948,7 @@ textarea {
 
 .cs_page_heading {
   height: 370px;
+  position: relative;
 }
 .cs_page_heading .breadcrumb {
   margin: 0;
@@ -3736,6 +3737,86 @@ textarea {
 
 .cs_slide .cs_hero.cs_style_1 {
   padding-bottom: 150px;
+}
+
+/* Hero Overlay for Fade Effect */
+.cs_hero_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.cs_hero.cs_style_1 .cs_hero_text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Text Colors for Better Contrast */
+.cs_hero.cs_style_1 .cs_hero_title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+.cs_hero.cs_style_1 .cs_hero_subtitle {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  line-height: 1.6;
+}
+
+/* Enhanced Typography for Better Aesthetics */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+}
+
+.cs_card_title {
+  font-weight: 700 !important;
+}
+
+.cs_btn {
+  font-weight: 600 !important;
+  letter-spacing: 0.02em;
+}
+
+/* Hero Phone Number - White Color */
+.cs_hero.cs_style_1 .cs_hero_number a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Page Heading Overlay for Fade Effect */
+.cs_page_heading_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.cs_page_heading .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure page heading text is white and visible */
+.cs_page_heading h1 {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cs_page_heading .breadcrumb {
+  color: #ffffff !important;
+}
+
+.cs_page_heading .breadcrumb-item a {
+  color: #ffffff !important;
 }
 
 /*--------------------------------------------------------------

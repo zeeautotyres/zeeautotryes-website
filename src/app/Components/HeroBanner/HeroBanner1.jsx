@@ -30,6 +30,7 @@ const HeroBanner1 = () => {
             {data.map((item, index)=>(
               <div key={index} className="cs_slide">
                 <div className="cs_hero cs_style_1 cs_type_1 cs_bg_filed cs_primary_bg cs_center" data-background={item.img}>
+                  <div className="cs_hero_overlay"></div>
                   <div className="container">
                     <div className="cs_hero_text">
                       <h1 className="cs_hero_title cs_fs_70 cs_mb_18 wow fadeInUp">{item.title}</h1>

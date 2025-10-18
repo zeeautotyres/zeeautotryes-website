@@ -31,7 +31,7 @@ const Contact = () => {
                     <div className="cs_iconbox_icon cs_center cs_accent_bg_light cs_heading_color">
                     <i className="bi bi-geo-alt-fill"></i></div>
                       <div className="cs_iconbox_info">
-                        <h3 className="cs_fs_18 cs_semibold cs_mb_2">Our Address :</h3>
+                        <h3 className="cs_fs_18 cs_semibold cs_mb_2">Our Address:</h3>
                         <p className="mb-0">416 Ealing Rd, Wembley HA0 1JQ</p>
                       </div>
                   </div>
