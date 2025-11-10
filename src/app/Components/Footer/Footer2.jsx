@@ -56,7 +56,7 @@ const Footer2 = () => {
               <div className="cs_footer_col">
                 <div className="cs_footer_widget">
                   <div className="cs_text_widget">
-                  <Image src="/assets/img/footer_logo_2.svg" alt="img" width={225} height={64}   />
+                  <Image src="/assets/img/newlogo.png" alt="Zee Auto Tyres logo" width={225} height={64}   />
                     <p>Phosfluorescently transform out-of-the-box paradigms whereas accurate supply chains. Continually</p>
                   </div>
                   {/* <div className="cs_social_btns cs_style_1">

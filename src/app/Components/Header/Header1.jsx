@@ -87,7 +87,7 @@ export default function Header1({ variant }) {
             <div className="cs_main_header_left">
             <div className="cs_logo_wrap">
               <Link className="cs_site_branding" href="/">
-                <Image src="/assets/img/logo.svg" alt="img" width={225} height={65}   />
+                <Image src="/assets/img/newlogo.png" alt="Zee Auto Tyres logo" width={225} height={65} priority />
               </Link>
               <div className="cs_logo_bg_shape cs_accent_color">
                   <svg width="509" height="141" viewBox="0 0 509 141" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -27,6 +27,13 @@ export const metadata = {
     description: 'Professional tyre services in Wembley. New & used tyres, wheel alignment, balancing, puncture repair and brake services. Quality guaranteed at competitive prices.',
     image: '/openGraphImage.jpg',
   },
+  icons: {
+    icon: [
+      { rel: 'icon', url: '/icon.png?v=4', type: 'image/png' },
+      { rel: 'shortcut icon', url: '/icon.png?v=4', type: 'image/png' },
+    ],
+    apple: [{ rel: 'apple-touch-icon', url: '/icon.png?v=4' }],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +41,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Themeservices" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/icon.png?v=4" />
+        <link rel="shortcut icon" type="image/png" href="/icon.png?v=4" />
+        <link rel="apple-touch-icon" href="/icon.png?v=4" />
       </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         {children}
