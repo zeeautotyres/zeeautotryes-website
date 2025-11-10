@@ -17,6 +17,13 @@ const timeToMinutes = (timeStr) => {
     return totalMinutes;
 };
 
+const BUSINESS_TIME_SLOTS = [
+    "6:00 AM", "6:30 AM", "7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM",
+    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
+    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM"
+];
+
 const BookPage = () => {
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedTime, setSelectedTime] = useState('');
@@ -35,13 +42,8 @@ const BookPage = () => {
         const today = new Date();
         const currentTime = today.getHours() * 60 + today.getMinutes();
         
-        // Default times for Monday-Saturday
-        const defaultTimes = [
-            "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", 
-            "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", 
-            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", 
-            "5:00 PM", "5:30 PM"
-        ];
+        // Default times for all days (6:00 AM to 6:00 PM, every 30 minutes)
+        const defaultTimes = BUSINESS_TIME_SLOTS;
         
         // Filter out past times if it's during business hours
         return defaultTimes.filter(time => {
@@ -63,17 +65,8 @@ const BookPage = () => {
         
         const times = [];
         
-        if (dayOfWeek >= 1 && dayOfWeek <= 6) {
-            // Monday to Saturday: 8:00 AM to 5:30 PM
-            times.push("8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", 
-                      "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", 
-                      "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", 
-                      "5:00 PM", "5:30 PM");
-        } else if (dayOfWeek === 0) {
-            // Sunday: 10:00 AM to 3:30 PM
-            times.push("10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", 
-                      "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM");
-        }
+        // All days share the same schedule: 6:00 AM to 6:00 PM
+        times.push(...BUSINESS_TIME_SLOTS);
         
         // If booking for today, filter out past times
         if (isToday) {
@@ -186,8 +179,8 @@ ${message}
                                     </div>
                                     <div className="cs_info_content">
                                         <h4>Operating Hours</h4>
-                                        <p>Mon - Sat: 8am to 6pm</p>
-                                        <p>Sun: 10am to 4pm</p>
+                                        <p>Mon - Fri: 6:00 AM - 6:00 PM</p>
+                                        <p>Sat - Sun: 6:00 AM - 6:00 PM</p>
                                     </div>
                                 </div>
                                 

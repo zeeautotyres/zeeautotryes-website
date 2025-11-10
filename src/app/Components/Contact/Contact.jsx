@@ -40,8 +40,8 @@ const Contact = () => {
                     <i className="bi bi-clock-fill"></i></div>
                       <div className="cs_iconbox_info">
                         <h3 className="cs_fs_18 cs_semibold cs_mb_2">Working Time :</h3>
-                        <p className="mb-0">Mon - Sat : 8:00 AM - 6:00 PM</p>
-                        <p className="mb-0">Sun : 10:00 AM - 4:00 PM</p>
+                        <p className="mb-0">Mon - Fri : 6:00 AM - 6:00 PM</p>
+                        <p className="mb-0">Sat - Sun : 6:00 AM - 6:00 PM</p>
                       </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 {
-  "/icon.png/route": "app/icon.png/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(defaultLayout)/page": "app/(defaultLayout)/page.js"
+  "/(defaultLayout)/page": "app/(defaultLayout)/page.js",
+  "/(defaultLayout)/contact/page": "app/(defaultLayout)/contact/page.js",
+  "/(defaultLayout)/book/page": "app/(defaultLayout)/book/page.js"
 }
